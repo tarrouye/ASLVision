@@ -8,7 +8,7 @@
 import Foundation
 
 
-let ALPHABET : [AlphabetEntry] = [
+var ALPHABET : [AlphabetEntry] = [
     AlphabetEntry(char: "a"),
     AlphabetEntry(char: "b"),
     AlphabetEntry(char: "c"),

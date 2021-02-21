@@ -76,15 +76,6 @@ struct AlphabetEntryQuizView: View {
                         .padding(5)
                         .padding(.horizontal, 5)
                         .background(BackgroundBlurView().cornerRadius(50))
-                    if(privModel.imgTest != nil){
-                        Image(uiImage: privModel.imgTest)
-                            .resizable()
-                            .scaledToFit()
-                            .scaleEffect(x: -1, y: 1)
-                            .frame(width: 300)
-                            //.background(Color.blue)
-                            .opacity(0.75)
-                    }
                     
                     Image("\(entry.char.uppercased())_test")
                         .resizable()

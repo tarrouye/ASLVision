@@ -98,6 +98,7 @@ class AlphabetEntryQuizViewModel : ObservableObject {
     /// Updates the UI with the results of the classification.
     /// - Tag: ProcessClassifications
     func processClassifications(for request: VNRequest, error: Error?) {
+        
         DispatchQueue.main.async {
             guard let results = request.results else {
                 print("Unable to classify image.\n\(error!.localizedDescription)")

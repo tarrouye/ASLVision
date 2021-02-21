@@ -34,6 +34,12 @@
 		944E4C3625E2B68B00A79C58 /* ALSClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 944E4C3525E2B68B00A79C58 /* ALSClassifier.mlmodel */; };
 		944E4C3A25E2C3F400A79C58 /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944E4C3925E2C3F400A79C58 /* CGImagePropertyOrientation.swift */; };
 		94F24D9925E2F701007501FC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F24D9825E2F701007501FC /* Extensions.swift */; };
+		94F24DB125E31349007501FC /* SceneKit Scene.scn in Resources */ = {isa = PBXBuildFile; fileRef = 94F24DAB25E31349007501FC /* SceneKit Scene.scn */; };
+		94F24DB225E31349007501FC /* ARViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F24DAC25E31349007501FC /* ARViewWrapper.swift */; };
+		94F24DB325E31349007501FC /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F24DAD25E31349007501FC /* Entry.swift */; };
+		94F24DB425E31349007501FC /* EchoAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F24DAE25E31349007501FC /* EchoAR.swift */; };
+		94F24DB525E31349007501FC /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F24DAF25E31349007501FC /* ARViewController.swift */; };
+		94F24DB625E31349007501FC /* RemoteTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F24DB025E31349007501FC /* RemoteTransformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +72,12 @@
 		944E4C3525E2B68B00A79C58 /* ALSClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ALSClassifier.mlmodel; sourceTree = SOURCE_ROOT; };
 		944E4C3925E2C3F400A79C58 /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
 		94F24D9825E2F701007501FC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		94F24DAB25E31349007501FC /* SceneKit Scene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "SceneKit Scene.scn"; sourceTree = "<group>"; };
+		94F24DAC25E31349007501FC /* ARViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewWrapper.swift; sourceTree = "<group>"; };
+		94F24DAD25E31349007501FC /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		94F24DAE25E31349007501FC /* EchoAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EchoAR.swift; sourceTree = "<group>"; };
+		94F24DAF25E31349007501FC /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		94F24DB025E31349007501FC /* RemoteTransformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteTransformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,7 @@
 		312D5A9225E1BC1D00F2EF13 = {
 			isa = PBXGroup;
 			children = (
+				94C928D725E22E9000712F9D /* AR */,
 				312D5A9D25E1BC1D00F2EF13 /* ASLVision */,
 				312D5A9C25E1BC1D00F2EF13 /* Products */,
 			);
@@ -136,6 +149,19 @@
 				312D5AA525E1BC2200F2EF13 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		94C928D725E22E9000712F9D /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				94F24DAF25E31349007501FC /* ARViewController.swift */,
+				94F24DAC25E31349007501FC /* ARViewWrapper.swift */,
+				94F24DAE25E31349007501FC /* EchoAR.swift */,
+				94F24DAD25E31349007501FC /* Entry.swift */,
+				94F24DB025E31349007501FC /* RemoteTransformation.swift */,
+				94F24DAB25E31349007501FC /* SceneKit Scene.scn */,
+			);
+			path = AR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F24DB125E31349007501FC /* SceneKit Scene.scn in Resources */,
 				312D5AA625E1BC2200F2EF13 /* Preview Assets.xcassets in Resources */,
 				312D5AB725E1BD5E00F2EF13 /* Localizable.strings in Resources */,
 				312D5AA325E1BC2200F2EF13 /* Assets.xcassets in Resources */,
@@ -210,9 +237,12 @@
 			files = (
 				312D5AA125E1BC1D00F2EF13 /* ContentView.swift in Sources */,
 				312D5AB225E1BC8100F2EF13 /* AlphabetListView.swift in Sources */,
+				94F24DB325E31349007501FC /* Entry.swift in Sources */,
 				312D5AC925E1D77400F2EF13 /* QuizEntry.swift in Sources */,
 				312D5AE125E1EABF00F2EF13 /* BackgroundBlurView.swift in Sources */,
+				94F24DB225E31349007501FC /* ARViewWrapper.swift in Sources */,
 				312D5AE725E2889B00F2EF13 /* AlphabetEntryQuizViewModel.swift in Sources */,
+				94F24DB525E31349007501FC /* ARViewController.swift in Sources */,
 				312D5A9F25E1BC1D00F2EF13 /* ASLVisionApp.swift in Sources */,
 				312D5ADB25E1DDED00F2EF13 /* AlphabetEntryCardView.swift in Sources */,
 				312D5AEA25E28ED100F2EF13 /* QuizTabViewModel.swift in Sources */,
@@ -223,6 +253,7 @@
 				312D5AD725E1DAF200F2EF13 /* FinishedQuizView.swift in Sources */,
 				312D5AC325E1D6E400F2EF13 /* ALPHABET.swift in Sources */,
 				312D5AC025E1D60600F2EF13 /* QuizTakingView.swift in Sources */,
+				94F24DB625E31349007501FC /* RemoteTransformation.swift in Sources */,
 				312D5ABD25E1D51600F2EF13 /* AlphabetEntryQuizView.swift in Sources */,
 				312D5AED25E2A3F000F2EF13 /* QuizEntryDetailView.swift in Sources */,
 				312D5AF125E2A49300F2EF13 /* QuizResultsListView.swift in Sources */,
@@ -232,6 +263,7 @@
 				312D5AAF25E1BC3F00F2EF13 /* QuizTabView.swift in Sources */,
 				312D5AD325E1DA2600F2EF13 /* NewQuizView.swift in Sources */,
 				312D5AC625E1D75D00F2EF13 /* QuizTakingViewModel.swift in Sources */,
+				94F24DB425E31349007501FC /* EchoAR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
