@@ -10,7 +10,7 @@ import SwiftUI
 struct AlphabetEntryQuizView: View {
     @ObservedObject var model: QuizTakingViewModel
     
-    @ObservedObject var privModel = AlphabetEntryQuizViewModel()
+    @StateObject var privModel = AlphabetEntryQuizViewModel()
     
     var entry : AlphabetEntry {
         return ALPHABET[model.currentAlphabetIndex]
@@ -27,7 +27,7 @@ struct AlphabetEntryQuizView: View {
     var body: some View {
         ZStack {
             VStack {
-                PreviewHolder()
+                PreviewHolder(shouldTakePic: $privModel.shouldCapture)
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
             .onTapGesture {
@@ -76,12 +76,22 @@ struct AlphabetEntryQuizView: View {
                         .padding(5)
                         .padding(.horizontal, 5)
                         .background(BackgroundBlurView().cornerRadius(50))
+                    if(privModel.imgTest != nil){
+                        Image(uiImage: privModel.imgTest)
+                            .resizable()
+                            .scaledToFit()
+                            .scaleEffect(x: -1, y: 1)
+                            .frame(width: 300)
+                            //.background(Color.blue)
+                            .opacity(0.75)
+                    }
                     
                     Image("\(entry.char.uppercased())_test")
                         .resizable()
                         .scaledToFit()
                         .scaleEffect(x: -1, y: 1)
                         .frame(width: 300)
+                        //.background(Color.blue)
                         .opacity(0.75)
                 } else if (privModel.state == .matchedOne) {
                     Text("START_AIDLESS_MATCHING_LABEL")
@@ -136,7 +146,7 @@ struct AlphabetEntryQuizView: View {
                         Button(action: {
                             model.logResults(entry, privModel.withAidResult!, privModel.noAidResult!)
                             model.next()
-                            privModel.reset()
+                            privModel.reset(model.currentAlphabetIndex)
                         }) {
                             Text("NEXT_ITEM_LABEL")
                                 .font(.headline)
@@ -156,5 +166,8 @@ struct AlphabetEntryQuizView: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+        .onAppear(){
+            self.privModel.setIndex(model.currentAlphabetIndex)
+        }
     }
 }

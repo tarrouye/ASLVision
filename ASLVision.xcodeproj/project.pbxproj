@@ -31,6 +31,9 @@
 		312D5AEA25E28ED100F2EF13 /* QuizTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AE925E28ED100F2EF13 /* QuizTabViewModel.swift */; };
 		312D5AED25E2A3F000F2EF13 /* QuizEntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AEC25E2A3F000F2EF13 /* QuizEntryDetailView.swift */; };
 		312D5AF125E2A49300F2EF13 /* QuizResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AF025E2A49300F2EF13 /* QuizResultsListView.swift */; };
+		944E4C3625E2B68B00A79C58 /* ALSClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 944E4C3525E2B68B00A79C58 /* ALSClassifier.mlmodel */; };
+		944E4C3A25E2C3F400A79C58 /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944E4C3925E2C3F400A79C58 /* CGImagePropertyOrientation.swift */; };
+		94F24D9925E2F701007501FC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F24D9825E2F701007501FC /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		312D5AE925E28ED100F2EF13 /* QuizTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTabViewModel.swift; sourceTree = "<group>"; };
 		312D5AEC25E2A3F000F2EF13 /* QuizEntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEntryDetailView.swift; sourceTree = "<group>"; };
 		312D5AF025E2A49300F2EF13 /* QuizResultsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsListView.swift; sourceTree = "<group>"; };
+		944E4C3525E2B68B00A79C58 /* ALSClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ALSClassifier.mlmodel; sourceTree = SOURCE_ROOT; };
+		944E4C3925E2C3F400A79C58 /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
+		94F24D9825E2F701007501FC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 			children = (
 				312D5A9E25E1BC1D00F2EF13 /* ASLVisionApp.swift */,
 				312D5AA025E1BC1D00F2EF13 /* ContentView.swift */,
+				944E4C3925E2C3F400A79C58 /* CGImagePropertyOrientation.swift */,
 				312D5AB925E1BD5E00F2EF13 /* Localizable.strings */,
 				312D5AB125E1BC8100F2EF13 /* AlphabetListView.swift */,
 				312D5ADD25E1DE0500F2EF13 /* AlphabetEntry.swift */,
@@ -103,6 +110,7 @@
 				312D5AAE25E1BC3F00F2EF13 /* QuizTabView.swift */,
 				312D5AE925E28ED100F2EF13 /* QuizTabViewModel.swift */,
 				312D5ACF25E1D7E600F2EF13 /* QuizEntryCardView.swift */,
+				94F24D9825E2F701007501FC /* Extensions.swift */,
 				312D5ACC25E1D7B500F2EF13 /* AverageMatchTimesView.swift */,
 				312D5AC825E1D77400F2EF13 /* QuizEntry.swift */,
 				312D5ABC25E1D51600F2EF13 /* AlphabetEntryQuizView.swift */,
@@ -111,6 +119,7 @@
 				312D5AD225E1DA2600F2EF13 /* NewQuizView.swift */,
 				312D5AD625E1DAF200F2EF13 /* FinishedQuizView.swift */,
 				312D5AEC25E2A3F000F2EF13 /* QuizEntryDetailView.swift */,
+				944E4C3525E2B68B00A79C58 /* ALSClassifier.mlmodel */,
 				312D5AF025E2A49300F2EF13 /* QuizResultsListView.swift */,
 				312D5ABF25E1D60600F2EF13 /* QuizTakingView.swift */,
 				312D5AC525E1D75D00F2EF13 /* QuizTakingViewModel.swift */,
@@ -207,8 +216,10 @@
 				312D5A9F25E1BC1D00F2EF13 /* ASLVisionApp.swift in Sources */,
 				312D5ADB25E1DDED00F2EF13 /* AlphabetEntryCardView.swift in Sources */,
 				312D5AEA25E28ED100F2EF13 /* QuizTabViewModel.swift in Sources */,
+				944E4C3A25E2C3F400A79C58 /* CGImagePropertyOrientation.swift in Sources */,
 				312D5AD025E1D7E600F2EF13 /* QuizEntryCardView.swift in Sources */,
 				312D5AE425E1F11200F2EF13 /* CameraPreviewView.swift in Sources */,
+				944E4C3625E2B68B00A79C58 /* ALSClassifier.mlmodel in Sources */,
 				312D5AD725E1DAF200F2EF13 /* FinishedQuizView.swift in Sources */,
 				312D5AC325E1D6E400F2EF13 /* ALPHABET.swift in Sources */,
 				312D5AC025E1D60600F2EF13 /* QuizTakingView.swift in Sources */,
@@ -216,6 +227,7 @@
 				312D5AED25E2A3F000F2EF13 /* QuizEntryDetailView.swift in Sources */,
 				312D5AF125E2A49300F2EF13 /* QuizResultsListView.swift in Sources */,
 				312D5ADE25E1DE0500F2EF13 /* AlphabetEntry.swift in Sources */,
+				94F24D9925E2F701007501FC /* Extensions.swift in Sources */,
 				312D5ACD25E1D7B500F2EF13 /* AverageMatchTimesView.swift in Sources */,
 				312D5AAF25E1BC3F00F2EF13 /* QuizTabView.swift in Sources */,
 				312D5AD325E1DA2600F2EF13 /* NewQuizView.swift in Sources */,

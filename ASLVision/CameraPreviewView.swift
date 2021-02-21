@@ -3,13 +3,16 @@
 import SwiftUI
 import UIKit
 import AVFoundation
+import NotificationCenter
 
 class PreviewView: UIView {
     private var captureSession: AVCaptureSession?
-
+    private var photoOutput = AVCapturePhotoOutput()
+    
+    
     init() {
         super.init(frame: .zero)
-
+        
         var allowedAccess = false
         let blocker = DispatchGroup()
         blocker.enter()
@@ -37,6 +40,15 @@ class PreviewView: UIView {
         session.addInput(videoDeviceInput)
         session.commitConfiguration()
         self.captureSession = session
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.capture(notif:)), name: Notification.Name("CapturePhoto"), object: nil)
+        
+    }
+    
+    @objc func capture(notif: NSNotification){
+        let image = self.takeScreenshot()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "GotPhoto"), object: nil, userInfo: ["photo": image])
+        
     }
 
     override class var layerClass: AnyClass {
@@ -65,20 +77,21 @@ class PreviewView: UIView {
 }
 
 struct PreviewHolder: UIViewRepresentable {
+    @Binding var shouldTakePic : Bool
     func makeUIView(context: UIViewRepresentableContext<PreviewHolder>) -> PreviewView {
-        PreviewView()
+        return PreviewView()
     }
 
     func updateUIView(_ uiView: PreviewView, context: UIViewRepresentableContext<PreviewHolder>) {
     }
 
     typealias UIViewType = PreviewView
-}
+    
+    class Coordinator : NSObject {
 
-struct DemoVideoStreaming: View {
-    var body: some View {
-        VStack {
-            PreviewHolder()
-        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+    }
+    
+    func makeCoordinator() -> PreviewHolder.Coordinator {
+        Coordinator()
     }
 }
