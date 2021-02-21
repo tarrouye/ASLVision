@@ -16,6 +16,14 @@ struct AlphabetEntryQuizView: View {
         return ALPHABET[model.currentAlphabetIndex]
     }
     
+    func triggerNextStage() {
+        if (privModel.state == .ready) {
+            privModel.startWithAid()
+        } else if (privModel.state == .matchedOne) {
+            privModel.startNoAid()
+        }
+    }
+    
     var body: some View {
         ZStack {
             VStack {
@@ -23,11 +31,7 @@ struct AlphabetEntryQuizView: View {
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
             .onTapGesture {
-                if (privModel.state == .ready) {
-                    privModel.startWithAid()
-                } else if (privModel.state == .matchedOne) {
-                    privModel.startNoAid()
-                }
+                triggerNextStage()
             }
             
             VStack {
@@ -63,6 +67,9 @@ struct AlphabetEntryQuizView: View {
                         .padding(.horizontal, 10)
                         .background(BackgroundBlurView().cornerRadius(25))
                         .frame(width: 300)
+                        .onTapGesture {
+                            triggerNextStage()
+                        }
                 } else if (privModel.state == .withAid) {
                     Text("MATCH_THIS_LABEL")
                         .font(.title2)
@@ -85,6 +92,9 @@ struct AlphabetEntryQuizView: View {
                         .padding(.horizontal, 10)
                         .background(BackgroundBlurView().cornerRadius(25))
                         .frame(width: 300)
+                        .onTapGesture {
+                            triggerNextStage()
+                        }
                 } else if (privModel.state == .finished) {
                     VStack {
                         Text("RESULTS_LABEL")

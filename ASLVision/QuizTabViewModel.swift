@@ -8,7 +8,7 @@
 import Foundation
 
 class QuizTabViewModel: ObservableObject {
-    var quizzes : [QuizEntry] = []
+    @Published var quizzes : [QuizEntry] = []
     
     var bestQuiz : QuizEntry? {
         var bestnoaid : TimeInterval? = nil
@@ -48,6 +48,12 @@ class QuizTabViewModel: ObservableObject {
     
     func logResult(_ entry : QuizEntry) {
         self.quizzes.append(entry)
+        
+        writeResultsToFile()
+    }
+    
+    func deleteQuiz(_ entry : QuizEntry) {
+        self.quizzes.removeAll(where: {$0.id == entry.id})
         
         writeResultsToFile()
     }

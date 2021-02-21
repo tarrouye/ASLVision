@@ -29,6 +29,8 @@
 		312D5AE425E1F11200F2EF13 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AE325E1F11200F2EF13 /* CameraPreviewView.swift */; };
 		312D5AE725E2889B00F2EF13 /* AlphabetEntryQuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AE625E2889B00F2EF13 /* AlphabetEntryQuizViewModel.swift */; };
 		312D5AEA25E28ED100F2EF13 /* QuizTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AE925E28ED100F2EF13 /* QuizTabViewModel.swift */; };
+		312D5AED25E2A3F000F2EF13 /* QuizEntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AEC25E2A3F000F2EF13 /* QuizEntryDetailView.swift */; };
+		312D5AF125E2A49300F2EF13 /* QuizResultsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AF025E2A49300F2EF13 /* QuizResultsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		312D5AE325E1F11200F2EF13 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 		312D5AE625E2889B00F2EF13 /* AlphabetEntryQuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetEntryQuizViewModel.swift; sourceTree = "<group>"; };
 		312D5AE925E28ED100F2EF13 /* QuizTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTabViewModel.swift; sourceTree = "<group>"; };
+		312D5AEC25E2A3F000F2EF13 /* QuizEntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEntryDetailView.swift; sourceTree = "<group>"; };
+		312D5AF025E2A49300F2EF13 /* QuizResultsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				312D5AE325E1F11200F2EF13 /* CameraPreviewView.swift */,
 				312D5AD225E1DA2600F2EF13 /* NewQuizView.swift */,
 				312D5AD625E1DAF200F2EF13 /* FinishedQuizView.swift */,
+				312D5AEC25E2A3F000F2EF13 /* QuizEntryDetailView.swift */,
+				312D5AF025E2A49300F2EF13 /* QuizResultsListView.swift */,
 				312D5ABF25E1D60600F2EF13 /* QuizTakingView.swift */,
 				312D5AC525E1D75D00F2EF13 /* QuizTakingViewModel.swift */,
 				312D5AA225E1BC2200F2EF13 /* Assets.xcassets */,
@@ -207,6 +213,8 @@
 				312D5AC325E1D6E400F2EF13 /* ALPHABET.swift in Sources */,
 				312D5AC025E1D60600F2EF13 /* QuizTakingView.swift in Sources */,
 				312D5ABD25E1D51600F2EF13 /* AlphabetEntryQuizView.swift in Sources */,
+				312D5AED25E2A3F000F2EF13 /* QuizEntryDetailView.swift in Sources */,
+				312D5AF125E2A49300F2EF13 /* QuizResultsListView.swift in Sources */,
 				312D5ADE25E1DE0500F2EF13 /* AlphabetEntry.swift in Sources */,
 				312D5ACD25E1D7B500F2EF13 /* AverageMatchTimesView.swift in Sources */,
 				312D5AAF25E1BC3F00F2EF13 /* QuizTabView.swift in Sources */,

@@ -10,6 +10,9 @@ import SwiftUI
 struct AlphabetEntryCardView : View {
     @ObservedObject var entry : AlphabetEntry
     
+    var aidTime : TimeInterval?
+    var noAidTime: TimeInterval?
+    
     var matchTimeTitle : LocalizedStringKey = "AVG_MATCH_TIMES"
     
     var body: some View {
@@ -45,7 +48,7 @@ struct AlphabetEntryCardView : View {
                     Spacer()
                 }
                 
-                AverageMatchTimesView(aid: entry.avgWithAid, withoutAid: entry.avgWithoutAid, title: matchTimeTitle)
+                AverageMatchTimesView(aid: aidTime ?? entry.avgWithAid, withoutAid: noAidTime ?? entry.avgWithoutAid, title: matchTimeTitle)
                 .padding(.vertical)
             }
             .background(BackgroundBlurView().opacity(0.8).clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous)))

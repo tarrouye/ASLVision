@@ -37,6 +37,7 @@ class QuizTakingViewModel : ObservableObject {
         if (currentAlphabetIndex + 1 < ALPHABET.count) {
             currentAlphabetIndex += 1
         } else {
+            self.entry.date = Date()
             state = .finished
             currentAlphabetIndex = 0
         }

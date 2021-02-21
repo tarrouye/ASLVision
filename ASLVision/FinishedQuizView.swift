@@ -30,20 +30,7 @@ struct FinishedQuizView: View {
                     .fontWeight(.semibold)
                     .padding()
                 
-                AverageMatchTimesView(aid: model.entry.avgWithAid, withoutAid: model.entry.avgWithoutAid)
-                    .padding(.vertical)
-                    .background(BackgroundBlurView().clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous)))
-                    .padding(.horizontal)
-                    .padding(.bottom)
-                
-                Divider()
-                    .padding(.bottom)
-                
-                ForEach(model.entry.results, id: \.self) { res in
-                    AlphabetEntryCardView(entry: res.alphabet_entry, matchTimeTitle: "MATCH_TIMES")
-                        .padding(.horizontal)
-                        .padding(.bottom)
-                }
+                QuizResultsListView(entry: model.entry)
                 
                 Button(action: {
                     daddyModel.logResult(model.entry)

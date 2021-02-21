@@ -31,9 +31,11 @@ struct QuizTabView: View {
                             }
                             .padding()
                             
-                            QuizEntryCardView(entry: model.bestQuiz!)
-                                .padding(.horizontal)
-                                .padding(.bottom)
+                            NavigationLink(destination: QuizEntryDetailView(entry: model.bestQuiz!)) {
+                                QuizEntryCardView(entry: model.bestQuiz!)
+                                    .padding(.horizontal)
+                                    .padding(.bottom)
+                            }.buttonStyle(PlainButtonStyle())
                             
                             
                             Divider()
@@ -50,9 +52,20 @@ struct QuizTabView: View {
                             if (self.model.quizzes.count > 1) {
                                 ForEach(self.model.quizzes.sorted(by: { $0.date > $1.date } ), id: \.id) { quiz in
                                     if quiz != self.model.bestQuiz {
-                                        QuizEntryCardView(entry: quiz)
-                                            .padding(.horizontal)
-                                            .padding(.bottom)
+                                        NavigationLink(destination: QuizEntryDetailView(entry: quiz)) {
+                                            QuizEntryCardView(entry: quiz)
+                                                .padding(.horizontal)
+                                                .padding(.bottom)
+                                                .contextMenu {
+                                                    Button(action: {
+                                                        withAnimation {
+                                                            self.model.deleteQuiz(quiz)
+                                                        }
+                                                    }) {
+                                                        Label("DELETE_LABEL", systemImage: "trash.fill")
+                                                    }
+                                                }
+                                        }.buttonStyle(PlainButtonStyle())
                                     }
                                 }
                             } else {
@@ -89,6 +102,7 @@ struct QuizTabView: View {
                         }
                     }
                 }
+                .padding(.top, 1) // 'fix' for scrollview glitch
                 .navigationTitle("QUIZZES_LABEL")
                 
                 
