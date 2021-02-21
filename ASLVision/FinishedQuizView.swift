@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FinishedQuizView: View {
     var model: QuizTakingViewModel
-    @Binding var active: Bool
+    var daddyModel: QuizTabViewModel
     
     var body: some View {
         ScrollView(.vertical) {
@@ -40,13 +40,14 @@ struct FinishedQuizView: View {
                     .padding(.bottom)
                 
                 ForEach(model.entry.results, id: \.self) { res in
-                    AlphabetEntryCardView(entry: res.alphabet_entry, avgWithAid: res.matchTimeWithAid, avgWithoutAid: res.matchTimeWithoutAid, matchTimeTitle: "MATCH_TIMES")
+                    AlphabetEntryCardView(entry: res.alphabet_entry, matchTimeTitle: "MATCH_TIMES")
                         .padding(.horizontal)
                         .padding(.bottom)
                 }
                 
                 Button(action: {
-                    active.toggle()
+                    daddyModel.logResult(model.entry)
+                    daddyModel.takingQuiz.toggle()
                 }) {
                     Text("CLOSE_BTN")
                         .font(.headline)

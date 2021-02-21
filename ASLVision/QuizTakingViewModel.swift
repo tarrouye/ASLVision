@@ -30,7 +30,7 @@ class QuizTakingViewModel : ObservableObject {
         self.entry.id = UUID()
         self.entry.results = []
         self.currentAlphabetIndex = 0
-        self.learningImgNum = (self.learningImgNum + 1) % 6
+        self.learningImgNum = (self.learningImgNum + Int.random(in: 1...5)) % 6
     }
     
     func next() {
@@ -51,5 +51,8 @@ class QuizTakingViewModel : ObservableObject {
         let result = QuizResultEntry(alphabet_entry: entry, matchTimeWithAid: withAidResult, matchTimeWithoutAid: noAidResult)
         
         self.entry.results.append(result)
+        
+        // adjust entry scorers and save
+        entry.updateScores(withAidResult, noAidResult)
     }
 }

@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct AlphabetEntryCardView : View {
-    var entry : AlphabetEntry
-    var avgWithAid : TimeInterval
-    var avgWithoutAid: TimeInterval
+    @ObservedObject var entry : AlphabetEntry
     
     var matchTimeTitle : LocalizedStringKey = "AVG_MATCH_TIMES"
     
@@ -32,7 +30,7 @@ struct AlphabetEntryCardView : View {
             VStack(alignment: .leading) {
                 HStack {
                     HStack(spacing: 0) {
-                        Text("Character: ")
+                        Text("CHAR_LABEL")
                             .font(.headline)
                             .fontWeight(.regular)
                         
@@ -47,7 +45,7 @@ struct AlphabetEntryCardView : View {
                     Spacer()
                 }
                 
-                AverageMatchTimesView(aid: avgWithAid, withoutAid: avgWithoutAid, title: matchTimeTitle)
+                AverageMatchTimesView(aid: entry.avgWithAid, withoutAid: entry.avgWithoutAid, title: matchTimeTitle)
                 .padding(.vertical)
             }
             .background(BackgroundBlurView().opacity(0.8).clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous)))

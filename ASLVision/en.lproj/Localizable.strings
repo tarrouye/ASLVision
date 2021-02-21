@@ -21,3 +21,15 @@
 "RESULTS_LABEL" = "Results";
 "AVG_MATCH_TIMES" = "Average match times:";
 "MATCH_TIMES" = "Match times:";
+"NO_QUIZZES_TITLE" = "No quizzes";
+"NO_QUIZZES_MESSAGE" = "You haven't completed any quizzes yet. Once you do, you'll start seeing insights here";
+"ONLY_ONE_QUIZ_MESSAGE" = "You've only completed one quiz so far. Keep trying to see more of your scores!";
+"CHAR_LABEL" = "Character: ";
+"WITH_AID_LABEL" = "With Aid";
+"WITHOUT_AID_LABEL" = "Without Aid";
+"TIME_LABEL %@" = "Time: %@";
+"START_AIDED_MATCHING_LABEL" = "When you're ready, tap the camera preview to start the timer and show the guide.";
+"MATCH_THIS_LABEL" = "Match the following:";
+"START_AIDLESS_MATCHING_LABEL" = "Great work! Now it's time to match without the guide. When you're ready, tap the camera preview to start the timer.";
+"EMDASH" = "—";
+"NEXT_ITEM_LABEL" = "Next Item";

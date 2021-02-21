@@ -20,16 +20,15 @@ struct AlphabetListView: View {
                 }
                 
                 ForEach(ALPHABET, id: \.char) { entry in
-                    
-                    
                     Button(action: {
                         if let ind = ALPHABET.firstIndex(where: { $0 == entry }) {
                             model.currentAlphabetIndex = ind
                             self.isShowingQuiz = true
                         }
                     }) {
-                        AlphabetEntryCardView(entry: entry, avgWithAid: 15.0, avgWithoutAid: 33.0)
-                            .padding()
+                        AlphabetEntryCardView(entry: entry)
+                            .padding(.horizontal)
+                            .padding(entry == ALPHABET[0] ? .vertical : .bottom)
                     }
                     .buttonStyle(PlainButtonStyle())
                 }

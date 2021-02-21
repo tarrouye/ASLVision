@@ -27,6 +27,8 @@
 		312D5ADE25E1DE0500F2EF13 /* AlphabetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5ADD25E1DE0500F2EF13 /* AlphabetEntry.swift */; };
 		312D5AE125E1EABF00F2EF13 /* BackgroundBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AE025E1EABF00F2EF13 /* BackgroundBlurView.swift */; };
 		312D5AE425E1F11200F2EF13 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AE325E1F11200F2EF13 /* CameraPreviewView.swift */; };
+		312D5AE725E2889B00F2EF13 /* AlphabetEntryQuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AE625E2889B00F2EF13 /* AlphabetEntryQuizViewModel.swift */; };
+		312D5AEA25E28ED100F2EF13 /* QuizTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AE925E28ED100F2EF13 /* QuizTabViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		312D5ADD25E1DE0500F2EF13 /* AlphabetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetEntry.swift; sourceTree = "<group>"; };
 		312D5AE025E1EABF00F2EF13 /* BackgroundBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundBlurView.swift; sourceTree = "<group>"; };
 		312D5AE325E1F11200F2EF13 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		312D5AE625E2889B00F2EF13 /* AlphabetEntryQuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetEntryQuizViewModel.swift; sourceTree = "<group>"; };
+		312D5AE925E28ED100F2EF13 /* QuizTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTabViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +97,12 @@
 				312D5AE025E1EABF00F2EF13 /* BackgroundBlurView.swift */,
 				312D5AC225E1D6E400F2EF13 /* ALPHABET.swift */,
 				312D5AAE25E1BC3F00F2EF13 /* QuizTabView.swift */,
+				312D5AE925E28ED100F2EF13 /* QuizTabViewModel.swift */,
 				312D5ACF25E1D7E600F2EF13 /* QuizEntryCardView.swift */,
 				312D5ACC25E1D7B500F2EF13 /* AverageMatchTimesView.swift */,
 				312D5AC825E1D77400F2EF13 /* QuizEntry.swift */,
 				312D5ABC25E1D51600F2EF13 /* AlphabetEntryQuizView.swift */,
+				312D5AE625E2889B00F2EF13 /* AlphabetEntryQuizViewModel.swift */,
 				312D5AE325E1F11200F2EF13 /* CameraPreviewView.swift */,
 				312D5AD225E1DA2600F2EF13 /* NewQuizView.swift */,
 				312D5AD625E1DAF200F2EF13 /* FinishedQuizView.swift */,
@@ -191,8 +197,10 @@
 				312D5AB225E1BC8100F2EF13 /* AlphabetListView.swift in Sources */,
 				312D5AC925E1D77400F2EF13 /* QuizEntry.swift in Sources */,
 				312D5AE125E1EABF00F2EF13 /* BackgroundBlurView.swift in Sources */,
+				312D5AE725E2889B00F2EF13 /* AlphabetEntryQuizViewModel.swift in Sources */,
 				312D5A9F25E1BC1D00F2EF13 /* ASLVisionApp.swift in Sources */,
 				312D5ADB25E1DDED00F2EF13 /* AlphabetEntryCardView.swift in Sources */,
+				312D5AEA25E28ED100F2EF13 /* QuizTabViewModel.swift in Sources */,
 				312D5AD025E1D7E600F2EF13 /* QuizEntryCardView.swift in Sources */,
 				312D5AE425E1F11200F2EF13 /* CameraPreviewView.swift in Sources */,
 				312D5AD725E1DAF200F2EF13 /* FinishedQuizView.swift in Sources */,

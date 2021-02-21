@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct QuizTakingView: View {
-    @Binding var active : Bool
     @ObservedObject var model : QuizTakingViewModel
+    @ObservedObject var daddyModel: QuizTabViewModel
     
     var body: some View {
         ZStack {
@@ -18,7 +18,7 @@ struct QuizTakingView: View {
             } else if (model.state == .taking) {
                 AlphabetEntryQuizView(model: model)
             } else if (model.state == .finished) {
-                FinishedQuizView(model: model, active: $active)
+                FinishedQuizView(model: model, daddyModel: daddyModel)
             }
         }
     }

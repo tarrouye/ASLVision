@@ -8,52 +8,19 @@
 import SwiftUI
 
 struct QuizTabView: View {
-    @ObservedObject var model = QuizTakingViewModel()
-    
-    var quizzes: [QuizEntry] = [
-        QuizEntry(id: UUID(), date: Date(), results: [
-            QuizResultEntry(alphabet_entry: AlphabetEntry(char: "a"), matchTimeWithAid: 13, matchTimeWithoutAid: 38),
-            QuizResultEntry(alphabet_entry: AlphabetEntry(char: "b"), matchTimeWithAid: 10, matchTimeWithoutAid: 30)
-        ]),
-        
-        QuizEntry(id: UUID(), date: Date().addingTimeInterval(-1762.0), results: [
-            QuizResultEntry(alphabet_entry: AlphabetEntry(char: "a"), matchTimeWithAid: 23, matchTimeWithoutAid: 45),
-            QuizResultEntry(alphabet_entry: AlphabetEntry(char: "b"), matchTimeWithAid: 17, matchTimeWithoutAid: 87)
-        ]),
-        
-        QuizEntry(id: UUID(), date: Date().addingTimeInterval(-289.0), results: [
-            QuizResultEntry(alphabet_entry: AlphabetEntry(char: "a"), matchTimeWithAid: 23, matchTimeWithoutAid: 45),
-            QuizResultEntry(alphabet_entry: AlphabetEntry(char: "b"), matchTimeWithAid: 17, matchTimeWithoutAid: 87),
-            QuizResultEntry(alphabet_entry: AlphabetEntry(char: "c"), matchTimeWithAid: 5, matchTimeWithoutAid: 3)
-        ])
-    ]
-    
-    var bestQuiz : QuizEntry? {
-        var bestnoaid : TimeInterval? = nil
-        var bestquiz: QuizEntry? = nil
-        
-        for q in quizzes {
-            if bestnoaid == nil || q.avgWithoutAid < bestnoaid! {
-                bestnoaid = q.avgWithoutAid
-                bestquiz = q
-            }
-        }
-        
-        return bestquiz
-    }
-    
-    @State var isTakingQuiz : Bool = false
+    @ObservedObject var model = QuizTabViewModel()
+    @ObservedObject var quizModel = QuizTakingViewModel()
     
     var body: some View {
         NavigationView {
             ZStack {
-                NavigationLink(destination: QuizTakingView(active: $isTakingQuiz, model: model), isActive: $isTakingQuiz) {
+                NavigationLink(destination: QuizTakingView(model: quizModel, daddyModel: model), isActive: $model.takingQuiz) {
                     
                 }
                 
                 ScrollView(.vertical) {
                     VStack(spacing: 0) {
-                        if (self.quizzes.count > 0) {
+                        if (self.model.quizzes.count > 0) {
                             // Results
                             HStack {
                                 Text("BEST_RESULTS_LABEL")
@@ -64,7 +31,7 @@ struct QuizTabView: View {
                             }
                             .padding()
                             
-                            QuizEntryCardView(entry: bestQuiz!)
+                            QuizEntryCardView(entry: model.bestQuiz!)
                                 .padding(.horizontal)
                                 .padding(.bottom)
                             
@@ -80,18 +47,45 @@ struct QuizTabView: View {
                             }
                             .padding()
                             
-                            ForEach(self.quizzes.sorted(by: { $0.date > $1.date } ), id: \.id) { quiz in
-                                if quiz != self.bestQuiz {
-                                    QuizEntryCardView(entry: quiz)
-                                        .padding(.horizontal)
-                                        .padding(.bottom)
+                            if (self.model.quizzes.count > 1) {
+                                ForEach(self.model.quizzes.sorted(by: { $0.date > $1.date } ), id: \.id) { quiz in
+                                    if quiz != self.model.bestQuiz {
+                                        QuizEntryCardView(entry: quiz)
+                                            .padding(.horizontal)
+                                            .padding(.bottom)
+                                    }
                                 }
+                            } else {
+                                Image("\(model.imageName)")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 200, height: 250)
+                                    .padding()
+                                
+                                Text("ONLY_ONE_QUIZ_MESSAGE")
+                                    .font(.title2)
+                                    .fontWeight(.semibold)
+                                    .padding()
                             }
                             
                             Color(UIColor.systemBackground)
                                 .frame(height: 50)
                         } else {
-                            Text("NO QUIZZES")
+                            Text("NO_QUIZZES_TITLE")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .padding()
+                            
+                            Image("\(model.imageName)")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 200, height: 250)
+                                .padding()
+                            
+                            Text("NO_QUIZZES_MESSAGE")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                                .padding()
                         }
                     }
                 }
@@ -102,8 +96,8 @@ struct QuizTabView: View {
                     Spacer()
                     
                     Button(action: {
-                        self.model.reset()
-                        self.isTakingQuiz = true
+                        self.quizModel.reset()
+                        self.model.startQuiz()
                     }) {
                         Text("NEW_QUIZ_BTN")
                             .font(.headline)
