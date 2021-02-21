@@ -11,6 +11,22 @@
 		312D5AA125E1BC1D00F2EF13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AA025E1BC1D00F2EF13 /* ContentView.swift */; };
 		312D5AA325E1BC2200F2EF13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 312D5AA225E1BC2200F2EF13 /* Assets.xcassets */; };
 		312D5AA625E1BC2200F2EF13 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 312D5AA525E1BC2200F2EF13 /* Preview Assets.xcassets */; };
+		312D5AAF25E1BC3F00F2EF13 /* QuizTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AAE25E1BC3F00F2EF13 /* QuizTabView.swift */; };
+		312D5AB225E1BC8100F2EF13 /* AlphabetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AB125E1BC8100F2EF13 /* AlphabetListView.swift */; };
+		312D5AB725E1BD5E00F2EF13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 312D5AB925E1BD5E00F2EF13 /* Localizable.strings */; };
+		312D5ABD25E1D51600F2EF13 /* AlphabetEntryQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5ABC25E1D51600F2EF13 /* AlphabetEntryQuizView.swift */; };
+		312D5AC025E1D60600F2EF13 /* QuizTakingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5ABF25E1D60600F2EF13 /* QuizTakingView.swift */; };
+		312D5AC325E1D6E400F2EF13 /* ALPHABET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AC225E1D6E400F2EF13 /* ALPHABET.swift */; };
+		312D5AC625E1D75D00F2EF13 /* QuizTakingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AC525E1D75D00F2EF13 /* QuizTakingViewModel.swift */; };
+		312D5AC925E1D77400F2EF13 /* QuizEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AC825E1D77400F2EF13 /* QuizEntry.swift */; };
+		312D5ACD25E1D7B500F2EF13 /* AverageMatchTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5ACC25E1D7B500F2EF13 /* AverageMatchTimesView.swift */; };
+		312D5AD025E1D7E600F2EF13 /* QuizEntryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5ACF25E1D7E600F2EF13 /* QuizEntryCardView.swift */; };
+		312D5AD325E1DA2600F2EF13 /* NewQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AD225E1DA2600F2EF13 /* NewQuizView.swift */; };
+		312D5AD725E1DAF200F2EF13 /* FinishedQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AD625E1DAF200F2EF13 /* FinishedQuizView.swift */; };
+		312D5ADB25E1DDED00F2EF13 /* AlphabetEntryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5ADA25E1DDED00F2EF13 /* AlphabetEntryCardView.swift */; };
+		312D5ADE25E1DE0500F2EF13 /* AlphabetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5ADD25E1DE0500F2EF13 /* AlphabetEntry.swift */; };
+		312D5AE125E1EABF00F2EF13 /* BackgroundBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AE025E1EABF00F2EF13 /* BackgroundBlurView.swift */; };
+		312D5AE425E1F11200F2EF13 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D5AE325E1F11200F2EF13 /* CameraPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +36,22 @@
 		312D5AA225E1BC2200F2EF13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		312D5AA525E1BC2200F2EF13 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		312D5AA725E1BC2200F2EF13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		312D5AAE25E1BC3F00F2EF13 /* QuizTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTabView.swift; sourceTree = "<group>"; };
+		312D5AB125E1BC8100F2EF13 /* AlphabetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetListView.swift; sourceTree = "<group>"; };
+		312D5AB825E1BD5E00F2EF13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		312D5ABC25E1D51600F2EF13 /* AlphabetEntryQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetEntryQuizView.swift; sourceTree = "<group>"; };
+		312D5ABF25E1D60600F2EF13 /* QuizTakingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTakingView.swift; sourceTree = "<group>"; };
+		312D5AC225E1D6E400F2EF13 /* ALPHABET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALPHABET.swift; sourceTree = "<group>"; };
+		312D5AC525E1D75D00F2EF13 /* QuizTakingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTakingViewModel.swift; sourceTree = "<group>"; };
+		312D5AC825E1D77400F2EF13 /* QuizEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEntry.swift; sourceTree = "<group>"; };
+		312D5ACC25E1D7B500F2EF13 /* AverageMatchTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageMatchTimesView.swift; sourceTree = "<group>"; };
+		312D5ACF25E1D7E600F2EF13 /* QuizEntryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEntryCardView.swift; sourceTree = "<group>"; };
+		312D5AD225E1DA2600F2EF13 /* NewQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuizView.swift; sourceTree = "<group>"; };
+		312D5AD625E1DAF200F2EF13 /* FinishedQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedQuizView.swift; sourceTree = "<group>"; };
+		312D5ADA25E1DDED00F2EF13 /* AlphabetEntryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetEntryCardView.swift; sourceTree = "<group>"; };
+		312D5ADD25E1DE0500F2EF13 /* AlphabetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetEntry.swift; sourceTree = "<group>"; };
+		312D5AE025E1EABF00F2EF13 /* BackgroundBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundBlurView.swift; sourceTree = "<group>"; };
+		312D5AE325E1F11200F2EF13 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +86,22 @@
 			children = (
 				312D5A9E25E1BC1D00F2EF13 /* ASLVisionApp.swift */,
 				312D5AA025E1BC1D00F2EF13 /* ContentView.swift */,
+				312D5AB925E1BD5E00F2EF13 /* Localizable.strings */,
+				312D5AB125E1BC8100F2EF13 /* AlphabetListView.swift */,
+				312D5ADD25E1DE0500F2EF13 /* AlphabetEntry.swift */,
+				312D5ADA25E1DDED00F2EF13 /* AlphabetEntryCardView.swift */,
+				312D5AE025E1EABF00F2EF13 /* BackgroundBlurView.swift */,
+				312D5AC225E1D6E400F2EF13 /* ALPHABET.swift */,
+				312D5AAE25E1BC3F00F2EF13 /* QuizTabView.swift */,
+				312D5ACF25E1D7E600F2EF13 /* QuizEntryCardView.swift */,
+				312D5ACC25E1D7B500F2EF13 /* AverageMatchTimesView.swift */,
+				312D5AC825E1D77400F2EF13 /* QuizEntry.swift */,
+				312D5ABC25E1D51600F2EF13 /* AlphabetEntryQuizView.swift */,
+				312D5AE325E1F11200F2EF13 /* CameraPreviewView.swift */,
+				312D5AD225E1DA2600F2EF13 /* NewQuizView.swift */,
+				312D5AD625E1DAF200F2EF13 /* FinishedQuizView.swift */,
+				312D5ABF25E1D60600F2EF13 /* QuizTakingView.swift */,
+				312D5AC525E1D75D00F2EF13 /* QuizTakingViewModel.swift */,
 				312D5AA225E1BC2200F2EF13 /* Assets.xcassets */,
 				312D5AA725E1BC2200F2EF13 /* Info.plist */,
 				312D5AA425E1BC2200F2EF13 /* Preview Content */,
@@ -127,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				312D5AA625E1BC2200F2EF13 /* Preview Assets.xcassets in Resources */,
+				312D5AB725E1BD5E00F2EF13 /* Localizable.strings in Resources */,
 				312D5AA325E1BC2200F2EF13 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,11 +188,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				312D5AA125E1BC1D00F2EF13 /* ContentView.swift in Sources */,
+				312D5AB225E1BC8100F2EF13 /* AlphabetListView.swift in Sources */,
+				312D5AC925E1D77400F2EF13 /* QuizEntry.swift in Sources */,
+				312D5AE125E1EABF00F2EF13 /* BackgroundBlurView.swift in Sources */,
 				312D5A9F25E1BC1D00F2EF13 /* ASLVisionApp.swift in Sources */,
+				312D5ADB25E1DDED00F2EF13 /* AlphabetEntryCardView.swift in Sources */,
+				312D5AD025E1D7E600F2EF13 /* QuizEntryCardView.swift in Sources */,
+				312D5AE425E1F11200F2EF13 /* CameraPreviewView.swift in Sources */,
+				312D5AD725E1DAF200F2EF13 /* FinishedQuizView.swift in Sources */,
+				312D5AC325E1D6E400F2EF13 /* ALPHABET.swift in Sources */,
+				312D5AC025E1D60600F2EF13 /* QuizTakingView.swift in Sources */,
+				312D5ABD25E1D51600F2EF13 /* AlphabetEntryQuizView.swift in Sources */,
+				312D5ADE25E1DE0500F2EF13 /* AlphabetEntry.swift in Sources */,
+				312D5ACD25E1D7B500F2EF13 /* AverageMatchTimesView.swift in Sources */,
+				312D5AAF25E1BC3F00F2EF13 /* QuizTabView.swift in Sources */,
+				312D5AD325E1DA2600F2EF13 /* NewQuizView.swift in Sources */,
+				312D5AC625E1D75D00F2EF13 /* QuizTakingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		312D5AB925E1BD5E00F2EF13 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				312D5AB825E1BD5E00F2EF13 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		312D5AA825E1BC2200F2EF13 /* Debug */ = {

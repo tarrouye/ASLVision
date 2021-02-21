@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  ASLVision
+
+  Created by Théo Arrouye on 2/20/21.
+  
+*/
+"QUIZ_LABEL" = "Quiz";
+"QUIZZES_LABEL" = "Quizzes";
+"ALPHABET_LABEL" = "Alphabet";
+"BEST_RESULTS_LABEL" = "Best Results";
+"PREV_RESULTS_LABEL" = "Previous Quizzes";
+"NEW_QUIZ_BTN" = "Start New Quiz";
+"AVG_WITH_AID %@" = "Average match time with AR aid: %@";
+"AVG_NO_AID %@" = "Average match time without AR aid: %@";
+"LETS_RIDE_BTN" = "Commence Learning!";
+"START_NEW_QUIZ_TITLE" = "Start new quiz";
+"START_NEW_QUIZ_MESSAGE" = "You will be taken through the alphabet one at a time and timed on your ability to match the symbol shown.";
+"CLOSE_BTN" = "Well done, me";
+"FINISHED_QUIZ_TITLE" = "Finished Quiz!";
+"RESULTS_LABEL" = "Results";
+"AVG_MATCH_TIMES" = "Average match times:";
+"MATCH_TIMES" = "Match times:";
